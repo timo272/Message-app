@@ -7,6 +7,7 @@ import org.springframework.messaging.simp.stomp.StompHeaders;
 import org.springframework.messaging.simp.stomp.StompSession;
 import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 
+import javax.swing.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -14,9 +15,9 @@ public class StompHandler extends StompSessionHandlerAdapter {
     private String username;
     private MessageListener messageListener;
 
-    public StompHandler (String username){
+    public StompHandler (MessageListener messageListener, String username){
         this.username = username;
-        //this.messageListener = messageListener;
+        this.messageListener = messageListener;
     }
 
     @Override

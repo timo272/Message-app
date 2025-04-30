@@ -1,5 +1,6 @@
 package com.example.timo_demo.web_socket;
 
+import com.example.timo_demo.MessageListener;
 import com.example.timo_demo.StompHandler;
 import org.springframework.messaging.converter.MappingJackson2MessageConverter;
 import org.springframework.messaging.simp.stomp.StompSession;
@@ -15,10 +16,10 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class Client {
-    private StompSession session;
+    private static StompSession session;
     private String username;
 
-    public Client(String username) throws ExecutionException, InterruptedException {
+    public Client(MessageListener messageListener, String username) throws ExecutionException, InterruptedException {
         this.username = username;
 
         List<Transport> transports = new ArrayList<>();
@@ -28,14 +29,13 @@ public class Client {
         WebSocketStompClient stompClient = new WebSocketStompClient(sockJsClient);
         stompClient.setMessageConverter(new MappingJackson2MessageConverter());
 
-        StompSessionHandler sessionHandler = new StompHandler(username);
-        String url = "ws://localhost:8080/ws"; // Use ws:// for WebSocket
+        StompSessionHandler sessionHandler = new StompHandler(messageListener, username);
+        String url = "https://message-app-ru87.onrender.com/ws"; // Use ws:// for WebSocket
 
         session = stompClient.connectAsync(url, sessionHandler).get();
-        while (true) ;
     }
 
-    public void sendMessage(Message message) {
+    public static void sendMessage(Message message) {
         try {
             session.send("/app/message", message);
             System.out.println("Message Sent: " + message.getMessage());
