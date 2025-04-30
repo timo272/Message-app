@@ -1,0 +1,13 @@
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/Gui.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/HintTextFieldUI.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/Main.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/MessageListener.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/RoundJTextField.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/StompHandler.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/Utilities.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/web_socket/Client.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/web_socket/Message.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/web_socket/SessionManager.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/web_socket/SocketConfig.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/web_socket/TimoDemoApplication.java
+/home/timo/IdeaProjects/CommunicationApp/src/main/java/com/example/timo_demo/web_socket/WebsocketController.java
